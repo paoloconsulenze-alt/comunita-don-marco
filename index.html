@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Comunità di don Marco</title>
+
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Parrocchie di Antignano, Celle, Revigliasco e San Martino">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, rgba(245,241,232,0) 0%, #f5f1e8 120px);
+      color: #1d2b45;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 820px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.12);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1000px;
+      z-index: 2;
+    }
+
+    .cross {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4.5rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .places {
+      margin-top: 14px;
+      letter-spacing: 2px;
+      font-size: 1rem;
+    }
+
+    .intro {
+      position: absolute;
+      bottom: 170px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 850px;
+      font-size: 1.7rem;
+      line-height: 1.4;
+      z-index: 2;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      font-family: Georgia, serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      margin-top: -40px;
+      padding: 0 18px 50px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 35px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #1d2b45;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: 0.2s;
+      border-bottom: 6px solid #d4b16a;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-family: Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .gospel {
+      background: #eef3f8;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 35px;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .gospel-icon {
+      font-size: 4rem;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .gospel-title {
+      color: #294b7a;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .gospel-quote {
+      font-size: 2rem;
+      font-family: Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    .gospel-text {
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+
+    .communications {
+      background: white;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 20px 45px;
+      color: #1d2b45;
+    }
+
+    .footer-main {
+      font-size: 2rem;
+      line-height: 1.4;
+      font-family: Georgia, serif;
+      margin-bottom: 20px;
+    }
+
+    .footer-places {
+      letter-spacing: 3px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero img {
+        height: 380px;
+      }
+
+      .intro {
+        font-size: 1.3rem;
+        bottom: 20px;
+      }
+
+      .gospel {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .gospel-quote {
+        font-size: 1.6rem;
+      }
+
+      .gospel-text {
+        font-size: 1.1rem;
+      }
+
+      .footer-main {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="sfondo-parrocchie.png" alt="Le nostre Parrocchie">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <div class="cross">✝</div>
+      <h1>La Comunità di don Marco</h1>
+
+      <div class="places">
+        ANTIGNANO • CELLE • REVIGLIASCO • SAN MARTINO
+      </div>
+    </div>
+
+    <div class="intro">
+      Un piccolo spazio per restare uniti<br>
+      nella fede e nella vita delle nostre comunità.
+    </div>
+  </section>
+
+  <div class="container">
+
+    <div class="cards" style="position:relative; z-index:5;">
+
+      <a class="card" href="javascript:void(0);" onclick="toggleSection('orari-messe')">
+        <div class="icon">⛪</div>
+        <div class="card-title">Orari Messe</div>
+        <div class="card-text">
+          Scopri gli orari delle Sante Messe
+        </div>
+      </a>
+
+      <a class="card" href="https://whatsapp.com/channel/0029Vb8EPZc9Bb66p3ObWu1v" target="_blank">
+        <div class="icon">📱</div>
+        <div class="card-title">Canale WhatsApp</div>
+        <div class="card-text">
+          Unisciti al canale per tutti gli avvisi
+        </div>
+      </a>
+
+      <a class="card" href="javascript:void(0);" onclick="toggleSection('chiese')">
+        <div class="icon">🏛️</div>
+        <div class="card-title">Le nostre Chiese</div>
+        <div class="card-text">
+          Scopri le quattro parrocchie
+        </div>
+      </a>
+
+      <a class="card" href="javascript:void(0);" onclick="toggleSection('contatti')">
+        <div class="icon">📞</div>
+        <div class="card-title">Contatti</div>
+        <div class="card-text">
+          Numeri utili e informazioni
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    <div class="footer-main">
+      Le nostre comunità desiderano essere<br>
+      luoghi di incontro, preghiera e speranza.
+    </div>
+
+    <div class="footer-places">
+      ANTIGNANO • CELLE • REVIGLIASCO • SAN MARTINO
+        <section id="orari-messe" style="display:none; max-width:1000px; margin:40px auto; padding:20px;" style="max-width:1000px; margin:40px auto; padding:20px;">
+
+      <div style="background:white; border-radius:20px; padding:30px; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+
+        <h2 style="text-align:center; font-family:Georgia, serif; font-size:2.4rem; margin-top:0; color:#1d2b45;">
+          ⛪ Orari Messe
+        </h2>
+
+        <p style="text-align:center; color:#666; margin-bottom:35px;">
+          Periodo Aprile – Ottobre
+        </p>
+
+        <h3>PREFESTIVE</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:30px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Antignano</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Sabato ore 18.00</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>San Martino</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">Sabato ore 17.00</td>
+          </tr>
+        </table>
+
+        <h3>FESTIVE</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:30px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Celle</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Domenica ore 10.00</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Revigliasco</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Domenica ore 10.00</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Antignano</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Domenica ore 11.15</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>San Martino</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">Domenica ore 11.15</td>
+          </tr>
+        </table>
+
+        <h3>MESSE MENSILI</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:30px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Perosini</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Prima domenica del mese ore 8.30</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>Gonella</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">Terza domenica del mese ore 8.30</td>
+          </tr>
+        </table>
+
+        <h3>FERIALI</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:30px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Antignano</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Martedì ore 8.30</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Antignano</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">Mercoledì ore 8.30 (Casa di riposo)</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>Revigliasco</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">Giovedì ore 9.00</td>
+          </tr>
+        </table>
+
+        <h3>PRIMO VENERDÌ DEL MESE</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:30px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:left;"><strong>Antignano</strong></td>
+            <td style="padding:10px; border-bottom:1px solid #ddd; text-align:right; font-variant-numeric: tabular-nums;">ore 8.30</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>Revigliasco</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">ore 9.00</td>
+          </tr>
+        </table>
+
+        <h3>PRIMO LUNEDÌ DEL MESE</h3>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:10px; table-layout:fixed;">
+          <colgroup>
+            <col style="width:45%;">
+            <col style="width:55%;">
+          </colgroup>
+          <tr>
+            <td style="padding:10px; text-align:left;"><strong>Celle</strong></td>
+            <td style="padding:10px; text-align:right; font-variant-numeric: tabular-nums;">ore 15.30</td>
+          </tr>
+        </table>
+
+        <p style="margin-top:0; color:#666; font-size:0.95rem; text-align:right;">
+          Casa di riposo — aperta anche agli esterni
+        </p>
+
+      </div>
+
+    </section>
+
+    <section id="chiese" style="display:none; max-width:1000px; margin:40px auto; padding:20px;">
+
+      <div style="background:white; border-radius:20px; padding:25px; box-shadow:0 2px 10px rgba(0,0,0,0.08); text-align:center;">
+
+        <h2 style="font-family:Georgia, serif; font-size:2.4rem; margin-top:0; color:#1d2b45;">
+          ⛪ Le nostre Chiese
+        </h2>
+
+        <div style="margin-top:30px;">
+
+          <img src="chiesa-antignano.jpg" alt="Chiesa di Antignano" style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+
+          <div style="font-size:2rem; font-family:Georgia, serif; margin-top:25px; color:#1d2b45;">
+            ⛪ Antignano
+          </div>
+
+          <div style="margin-top:10px; color:#666; font-size:1.1rem;">
+            Chiesa Parrocchiale di Santo Stefano
+          </div>
+
+          <div style="margin-top:25px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.8; color:#444; font-size:1.05rem; text-align:center;">
+            La chiesa parrocchiale di Antignano domina il centro del paese con la sua facciata neogotica.
+            È uno dei luoghi più rappresentativi della comunità e accompagna da generazioni
+            la vita religiosa delle colline astigiane.
+          </div>
+
+        </div>
+
+        <div style="margin-top:70px;">
+
+          <img src="chiesa-celle.jpg" alt="Chiesa di Celle" style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+
+          <div style="font-size:2rem; font-family:Georgia, serif; margin-top:25px; color:#1d2b45;">
+            ⛪ Celle Enomondo
+          </div>
+
+          <div style="margin-top:10px; color:#666; font-size:1.1rem;">
+            Chiesa di Sant’Antonio Abate, San Martino e Vergine del Rosario
+          </div>
+
+          <div style="margin-top:25px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.8; color:#444; font-size:1.05rem; text-align:center;">
+            La chiesa parrocchiale di Celle Enomondo custodisce la devozione della comunità locale
+            ed è un punto di riferimento per la vita religiosa del paese.
+            La sua facciata moderna accoglie i fedeli nel cuore delle colline astigiane.
+          </div>
+
+        </div>
+
+        <div style="margin-top:70px;">
+
+          <img src="chiesa-revigliasco.jpg" alt="Chiesa di Revigliasco" style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+
+          <div style="font-size:2rem; font-family:Georgia, serif; margin-top:25px; color:#1d2b45;">
+            ⛪ Revigliasco
+          </div>
+
+          <div style="margin-top:10px; color:#666; font-size:1.1rem;">
+            Chiesa Parrocchiale di San Martino
+          </div>
+
+          <div style="margin-top:25px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.8; color:#444; font-size:1.05rem; text-align:center;">
+            La chiesa parrocchiale di Revigliasco accompagna da secoli la vita della comunità locale.
+            La sua facciata in mattoni e il campanile caratteristico richiamano la tradizione religiosa
+            delle colline del Monferrato.
+          </div>
+
+        </div>
+
+        <div style="margin-top:70px;">
+
+          <img src="chiesa-san-martino.webp" alt="Chiesa di San Martino" style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+
+          <div style="font-size:2rem; font-family:Georgia, serif; margin-top:25px; color:#1d2b45;">
+            ⛪ San Martino Alfieri
+          </div>
+
+          <div style="margin-top:10px; color:#666; font-size:1.1rem;">
+            Chiesa Parrocchiale dei Santi Carlo e Maria
+          </div>
+
+          <div style="margin-top:25px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.8; color:#444; font-size:1.05rem; text-align:center;">
+            La chiesa attuale venne costruita tra il 1829 e il 1833 su progetto dell’architetto Ernesto Melano,
+            per volontà della famiglia Alfieri.
+            Sorge nel cuore del paese e custodisce una lunga storia legata alla vita delle colline astigiane.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contatti" style="display:none; max-width:1000px; margin:40px auto; padding:20px;">
+
+      <div style="background:white; border-radius:20px; padding:35px; box-shadow:0 2px 10px rgba(0,0,0,0.08); text-align:center;">
+
+        <h2 style="font-family:Georgia, serif; font-size:2.4rem; margin-top:0; color:#1d2b45;">
+          📞 Contatti
+        </h2>
+
+        <div style="font-size:1.4rem; font-family:Georgia, serif; margin-top:25px; color:#1d2b45;">
+          Don Marco Andina
+        </div>
+
+        <div style="margin-top:8px; color:#666; font-size:1rem;">
+          Vicario Generale della Diocesi di Asti
+        </div>
+
+        <div style="margin-top:30px; line-height:2; font-size:1.1rem;">
+          📱 <strong>328 465 7989</strong><br>
+          ✉️ andinadonmarco@gmail.com
+        </div>
+
+        <div style="margin-top:30px; color:#555; line-height:1.8;">
+          via Malabaila, 2<br>
+          14010 ANTIGNANO (AT)
+        </div>
+
+      </div>
+
+    </section>
+
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const sections = ['orari-messe', 'contatti', 'chiese'];
+
+      sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+
+        if (sectionId === id) {
+          if (section.style.display === 'none' || section.style.display === '') {
+            section.style.display = 'block';
+            section.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            section.style.display = 'none';
+          }
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
